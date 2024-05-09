@@ -10,6 +10,8 @@ import { PageProps } from "@/types";
 import { useState, PropsWithChildren, ReactNode, useEffect } from "react";
 import AudioPlayer from "./Music.tsx";
 import FlyingPlaneHTML from "./ahmedPlane.tsx";
+import Donate from "./donatePage.tsx";
+
 function IconsApps({
   user,
   header,
@@ -139,7 +141,7 @@ function IconsApps({
                 htmlFor=""
                 className="text-white flex ali gn-middle justify-center"
               >
-                Holan Radio
+                Radio
               </label>
             </div>
           </button>
@@ -194,7 +196,7 @@ function IconsApps({
                 y={50}
                 noResize={true}
                 background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
-                onclose={() => closeWinBox("winbox3")}
+                onClose={() => closeWinBox("winbox3")}
               >
                 <BackGroundVid />
                 <SignUpForm />
@@ -219,6 +221,8 @@ function IconsApps({
       </div>
 
       {/* Second Coloum goes here  */}
+
+      <div className="col-span-1 row-span-1"></div>
     </div>
   );
 }
