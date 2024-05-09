@@ -4,10 +4,6 @@ import WinBox from "react-winbox";
 import { DonateHolan, DonateAhmed, DonateSava, DonateIbo } from "./donatePage";
 
 export default function Developers() {
-  const handleButtonClick = (link: string) => {
-    window.location.href = link;
-  };
-
   const [winBoxStates, setWinBoxStates] = useState({
     winbox12: false,
     winbox13: false,
