@@ -1,5 +1,5 @@
 import { useState } from "react";
-import donatePage from "./donatePage";
+
 import WinBox from "react-winbox";
 import { DonateHolan, DonateAhmed, DonateSava, DonateIbo } from "./donatePage";
 
