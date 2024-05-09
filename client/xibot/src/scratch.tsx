@@ -35,7 +35,6 @@ function IconsApps({
 
   return (
     <div className="grid grid-cols-5 grid-rows-2 gap-2">
-      {/* first Coloum */}
       <div className="col-span-1 row-span-1">
         <div>
           <button
@@ -218,7 +217,9 @@ function IconsApps({
         </div>
       </div>
 
-      {/* Second Coloum goes here  */}
+      <div className="col-span-1 row-span-1"></div>
+
+      {/* the end of the page */}
     </div>
   );
 }
