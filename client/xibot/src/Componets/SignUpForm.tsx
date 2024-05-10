@@ -18,7 +18,6 @@ export default function SignUpForm() {
         title=""
         isActive={activeIndex === 0}
         onShow={() => setActiveIndex(0)}
-        
       >
         <form action="/signup" method="get" className="p-5 font-mono m-5">
           <h1 className="mb-7">Sign Up</h1>
