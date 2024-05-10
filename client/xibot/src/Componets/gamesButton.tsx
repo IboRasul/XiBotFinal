@@ -3,6 +3,7 @@ import { useState } from "react";
 import WinBox from "react-winbox";
 
 import HexGLGame from "./hexGL";
+import ChessGame from "./chessGame";
 
 export default function GamesButton() {
   const [winBoxStates, setWinBoxStates] = useState({
@@ -33,7 +34,7 @@ export default function GamesButton() {
             <div className="flex flex-col items-center justify-center">
               <div className="backdrop-blur m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">
                 <img
-                  src="https://i.pinimg.com/originals/91/66/6e/91666e9a153d15052a86a55903569c89.gif"
+                  src="https://i.pinimg.com/originals/c2/84/59/c28459c237af4ca11bdc4464ae29097b.gif"
                   alt=""
                   className="h-32 w-32"
                 />
@@ -78,7 +79,7 @@ export default function GamesButton() {
             <div className="flex flex-col items-center justify-center">
               <div className="backdrop-blur m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">
                 <img
-                  src="https://i.pinimg.com/originals/91/66/6e/91666e9a153d15052a86a55903569c89.gif"
+                  src="https://i.pinimg.com/originals/5c/66/d7/5c66d76fd30351a5b6f7d3811c918e32.gif"
                   alt=""
                   className="h-32 w-32"
                 />
@@ -86,7 +87,7 @@ export default function GamesButton() {
                   htmlFor=""
                   className="text-white flex align-middle justify-center"
                 >
-                  any
+                  Snake
                 </label>
               </div>
 
@@ -96,7 +97,7 @@ export default function GamesButton() {
               >
                 {winBoxStates["winbox13"] && (
                   <WinBox
-                    title="any"
+                    title="Snake"
                     width={550}
                     height={590}
                     x={100}
@@ -104,7 +105,9 @@ export default function GamesButton() {
                     noResize={false}
                     background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
                     onClose={() => closeWinBox("winbox13")}
-                  ></WinBox>
+                  >
+                    <ChessGame />
+                  </WinBox>
                 )}
                 <div className="backdrop-blur   drop-shadow-lg shadow-2xl text-gray-500  ">
                   <label
