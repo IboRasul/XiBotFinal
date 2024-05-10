@@ -21,25 +21,23 @@ const AnimeQuoteData = () => {
   }, []);
 
   return (
-    <div className="grid">
-      <BackGroundVid
-        sample={
-          "https://i.seadn.io/gae/Mr5cVjOrmlG3AOLGbv4QFC43IoikSvdAM-v6rRSQuVq0u1BkMi_l8zoVZ-7f0N-lVIAc6yoGwVLYMrJwWWgX9OctAWn_190LE-0HoQ?w=500&auto=format"
-        }
-      />
-      {loading ? (
-        <p>Loading...</p>
-      ) : quote ? (
-        <div>
-          <h2>{quote.character}</h2>
-          <blockquote>
-            <p>"{quote.quote}"</p>
-          </blockquote>
-          <p>From: {quote.anime}</p>
-        </div>
-      ) : (
-        <p>No quote available.</p>
-      )}
+    <div className="grid grid-cols-1 gap-4 py-4 px-6">
+      <BackGroundVid sample={"https://i.imgur.com/YPQc9ad.gif"} />
+      <div>
+        {loading ? (
+          <p className="text-center text-xl font-bold">Loading...</p>
+        ) : quote ? (
+          <div className="text-center">
+            <h2 className="text-2xl font-bold">{quote.character}</h2>
+            <blockquote className="italic text-lg">
+              <p>"{quote.quote}"</p>
+            </blockquote>
+            <p className="text-lg">From: {quote.anime}</p>
+          </div>
+        ) : (
+          <p className="text-center text-xl font-bold">No quote available.</p>
+        )}
+      </div>
     </div>
   );
 };
