@@ -1,0 +1,6 @@
+// PluginContext.d.ts
+declare module "./PluginContext" {
+    const AnimeQuotePluginProvider;
+    export default AnimeQuotePluginProvider;
+  }
+  
