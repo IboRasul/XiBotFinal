@@ -1,22 +1,23 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import "winbox/dist/css/winbox.min.css";
 import "winbox/dist/css/themes/modern.min.css";
 import WinBox from "react-winbox";
-import BackGroundVid from "./dump/BackGroundVid";
 import SignUpForm from "./SignUpForm";
 import AI from "../../Pages/AI";
 // import Music from "./Music";
 // import { Link, Head, router } from "@inertiajs/react";
-import { PageProps } from "@/types";
-import { useState, PropsWithChildren, ReactNode, useEffect } from "react";
+import { useState } from "react";
 import AudioPlayer from "./Music.tsx";
-import FlyingPlaneHTML from "./ahmedPlane.tsx";
-import Donate from "./donatePage.tsx";
+import HexGLGame from "./hexGL.tsx";
 
-function IconsApps({
-  user,
-  header,
-  children,
-}: PropsWithChildren<{ user: User; header?: ReactNode }>) {
+// {
+//   user,
+//   header,
+//   children,
+// }
+//: PropsWithChildren<{ user: User; header?: ReactNode }>)
+
+function IconsApps() {
   const [winBoxStates, setWinBoxStates] = useState({
     winbox0: false,
     winbox1: false,
@@ -190,16 +191,17 @@ function IconsApps({
             {winBoxStates["winbox3"] && (
               <WinBox
                 title="winbox3"
-                width={350}
-                height={497}
+                width={1050}
+                height={797}
                 x={100}
                 y={50}
-                noResize={true}
+                noResize={false}
                 background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
                 onClose={() => closeWinBox("winbox3")}
               >
-                <BackGroundVid />
-                <SignUpForm />
+                {/* <BackGroundVid />
+                <SignUpForm /> */}
+                <HexGLGame />
               </WinBox>
             )}
             <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">
