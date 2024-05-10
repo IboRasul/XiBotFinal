@@ -7,9 +7,10 @@ import AI from "../../Pages/AI";
 // import { Link, Head, router } from "@inertiajs/react";
 import { useState } from "react";
 import AudioPlayer from "./Music.tsx";
-import HexGLGame from "./hexGL.tsx";
+
 import { useAnimeQuotePlugin } from "../contexts/PluginContext";
 import AnimeQuoteData from "./animeQuoteData";
+import GamesButton from "./gamesButton.tsx";
 
 // function IconsApps({
 //   user,
@@ -75,7 +76,7 @@ function IconsApps() {
                 y={50}
                 noResize={true}
                 background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
-                onclose={() => closeWinBox("winbox0")}
+                onClose={() => closeWinBox("winbox0")}
               >
                 <AI />
               </WinBox>
@@ -211,7 +212,7 @@ function IconsApps() {
           >
             {winBoxStates["winbox3"] && (
               <WinBox
-                title="winbox3"
+                title="Arcade"
                 width={1050}
                 height={797}
                 x={100}
@@ -222,12 +223,12 @@ function IconsApps() {
               >
                 {/* <BackGroundVid />
                 <SignUpForm /> */}
-                <HexGLGame />
+                <GamesButton />
               </WinBox>
             )}
             <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">
               <img
-                src="https://i.pinimg.com/originals/1d/05/8a/1d058aa243c8d46cfa234372962cd674.gif"
+                src="https://i.pinimg.com/originals/d7/c5/4c/d7c54cb21945edfa4d063cba370841e4.gif"
                 alt=""
                 className="w-full h-auto rounded"
                 style={{ maxWidth: "100px" }}
@@ -236,7 +237,7 @@ function IconsApps() {
                 htmlFor=""
                 className="text-white flex ali gn-middle justify-center"
               >
-                Donate
+                Arcade
               </label>
             </div>
           </button>
