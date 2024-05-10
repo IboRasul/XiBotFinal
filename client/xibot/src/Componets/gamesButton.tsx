@@ -23,7 +23,7 @@ export default function GamesButton() {
   return (
     <>
       <img
-        src="public/gif/Computer-screen-code-glitch-animation-gif-background-free.gif"
+        src="https://i.pinimg.com/originals/df/7c/46/df7c469606c2a5c9710f2d1ac79384c7.gif"
         alt=""
         className="absolute -z-10 w-full h-full bg-cover object-cover"
       />
@@ -51,7 +51,7 @@ export default function GamesButton() {
               >
                 {winBoxStates["winbox12"] && (
                   <WinBox
-                    title="Game"
+                    title="HexGL"
                     width={550}
                     height={590}
                     x={100}
@@ -68,7 +68,7 @@ export default function GamesButton() {
                     htmlFor=""
                     className="text-white flex align-middle justify-center"
                   >
-                    Game
+                    Play
                   </label>
                 </div>
               </button>
@@ -77,18 +77,16 @@ export default function GamesButton() {
           <li>
             <div className="flex flex-col items-center justify-center">
               <div className="backdrop-blur m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">
-                <div className="w-32 h-32">
-                  <img
-                    src="https://i.pinimg.com/564x/c2/99/f8/c299f80407ef02701b4525c490eb4a51.jpg"
-                    alt=""
-                    className="h-32 w-32"
-                  />
-                </div>
+                <img
+                  src="https://i.pinimg.com/originals/91/66/6e/91666e9a153d15052a86a55903569c89.gif"
+                  alt=""
+                  className="h-32 w-32"
+                />
                 <label
                   htmlFor=""
                   className="text-white flex align-middle justify-center"
                 >
-                  Ahmed
+                  HexGL
                 </label>
               </div>
 

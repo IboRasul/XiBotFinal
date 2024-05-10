@@ -213,8 +213,8 @@ function IconsApps() {
             {winBoxStates["winbox3"] && (
               <WinBox
                 title="Arcade"
-                width={1050}
-                height={797}
+                width={350}
+                height={550}
                 x={100}
                 y={50}
                 noResize={false}
