@@ -57,6 +57,84 @@ function IconsApps() {
   console.log(useAnimeQuotePlugin());
 
   return (
+    <div className="grid-cols-11 grid ">
+      <span className="">
+        <ul className="">
+                {/* Conditionally render based on useAnimeQuotePlugin() */}
+      {useAnimeQuotePlugin() ? (
+        // This div will only be rendered if animeQuotePluginEnabled is true
+        <div id="first">
+          <div className="flex flex-col items-center justify-center">
+            <button
+              onClick={() => openWinBox("winbox10")}
+              className="bg-transparent"
+            >
+              {winBoxStates["winbox10"] && (
+                <WinBox
+                  title="Anime Quote"
+                  width={440}
+                  height={500}
+                  x={100}
+                  y={50}
+                  noResize={true}
+                  // border={1}
+                  background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
+                  onclose={() => closeWinBox("winbox10")
+                  }
+                >
+                  {/* todo api request data show here */}
+                  <AnimeQuoteData />
+                </WinBox>
+              )}
+              <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3 ">
+                <img
+                  src="https://media.tenor.com/cyORI7kwShQAAAAi/shigure-ui-dance.gif"
+                  alt=""
+                  className="w-full h-auto rounded"
+                  style={{ maxWidth: "100px" }}
+                />
+                <label className="text-white flex align-middle justify-center ">
+                  AnimeQuote
+                </label>
+              </div>
+            </button>
+          </div>
+        </div>
+      ) : null /* If useAnimeQuotePlugin() returns false, render nothing */}
+        <div id="first">
+          <div className="flex flex-col items-center justify-center">
+            <button
+              onClick={() => openWinBox("winbox0")}
+              className="bg-transparent"
+            >
+              {winBoxStates["winbox0"] && (
+                <WinBox
+                  title="AI chat"
+                  width={350}
+                  height={497}
+                  x={100}
+                  y={50}
+                  noResize={true}
+                  background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
+                  onclose={() => closeWinBox("winbox0")}
+                >
+                  <AI />
+                </WinBox>
+              )}
+              <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3 ">
+                <img
+                  src="https://i.pinimg.com/originals/73/08/b9/7308b9f96595bfa4ae5942be9cceea35.gif"
+                  alt=""
+                  className="w-full h-auto rounded"
+                  style={{ maxWidth: "100px" }}
+                />
+                <label className="text-white flex align-middle justify-center ">
+                  AI
+                </label>
+              </div>
+            </button>
+          </div>
+        </div>
     <div className="grid grid-cols-5 grid-rows-2 gap-2 overflow-x-hidden">
       {/* first Coloum */}
 
