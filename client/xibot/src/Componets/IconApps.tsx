@@ -7,7 +7,18 @@ import AI from "../../Pages/AI";
 // import { Link, Head, router } from "@inertiajs/react";
 import { useState } from "react";
 import AudioPlayer from "./Music.tsx";
+
 import HexGLGame from "./hexGL.tsx";
+import { useAnimeQuotePlugin } from "../contexts/PluginContext";
+import zIndex from "@mui/material/styles/zIndex";
+import AnimeQuoteData from "./animeQuoteData";
+
+// function IconsApps({
+//   user,
+//   header,
+//   children,
+// }: PropsWithChildren<{ user: User; header?: ReactNode }>) {
+
 // {
 //   user,
 //   header,
@@ -24,6 +35,17 @@ function IconsApps() {
     winbox4: false,
     winbox5: false,
     winbox9: false,
+
+    winbox10: false,
+    winbox11: false,
+    winbox12: false,
+    winbox13: false,
+    winbox14: false,
+    winbox15: false,
+    winbox16: false,
+    winbox17: false,
+    winbox18: false,
+    winbox19: false,
   });
 
   const openWinBox = (title: string) => {
@@ -33,6 +55,8 @@ function IconsApps() {
   const closeWinBox = (title: string) => {
     setWinBoxStates((prevStates) => ({ ...prevStates, [title]: false }));
   };
+  console.log("help ");
+  console.log(useAnimeQuotePlugin());
 
   return (
     <div className="grid grid-cols-5 grid-rows-2 gap-2 overflow-x-hidden">
