@@ -8,7 +8,6 @@ import AI from "../../Pages/AI";
 // import { Link, Head, router } from "@inertiajs/react";
 import { useState } from "react";
 import AudioPlayer from "./Music.tsx";
-import HexGLGame from "./hexGL.tsx";
 
 // {
 //   user,
