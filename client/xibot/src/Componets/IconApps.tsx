@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import "winbox/dist/css/winbox.min.css";
 import "winbox/dist/css/themes/modern.min.css";
 import WinBox from "react-winbox";
@@ -8,10 +7,8 @@ import AI from "../../Pages/AI";
 // import { Link, Head, router } from "@inertiajs/react";
 import { useState } from "react";
 import AudioPlayer from "./Music.tsx";
-
 import HexGLGame from "./hexGL.tsx";
 import { useAnimeQuotePlugin } from "../contexts/PluginContext";
-import zIndex from "@mui/material/styles/zIndex";
 import AnimeQuoteData from "./animeQuoteData";
 
 // function IconsApps({
@@ -62,6 +59,7 @@ function IconsApps() {
   return (
     <div className="grid grid-cols-5 grid-rows-2 gap-2 overflow-x-hidden">
       {/* first Coloum */}
+
       <div className="col-span-1 row-span-1">
         <div>
           <button
@@ -246,7 +244,52 @@ function IconsApps() {
       </div>
       {/* Second Coloum goes here  */}
 
-      <div className="col-span-1 row-span-1"></div>
+      <div className="col-span-1 row-span-1">
+        <div>
+          {/* Conditionally render based on useAnimeQuotePlugin() */}
+          {
+            useAnimeQuotePlugin() ? (
+              // This div will only be rendered if animeQuotePluginEnabled is true
+              <div id="first">
+                <div className="flex flex-col items-center justify-center">
+                  <button
+                    onClick={() => openWinBox("winbox10")}
+                    className="bg-transparent"
+                  >
+                    {winBoxStates["winbox10"] && (
+                      <WinBox
+                        title="Anime Quote"
+                        width={440}
+                        height={500}
+                        x={100}
+                        y={50}
+                        noResize={true}
+                        // border={1}
+                        background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
+                        onclose={() => closeWinBox("winbox10")}
+                      >
+                        {/* todo api request data show here */}
+                        <AnimeQuoteData />
+                      </WinBox>
+                    )}
+                    <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3 ">
+                      <img
+                        src="https://media.tenor.com/cyORI7kwShQAAAAi/shigure-ui-dance.gif"
+                        alt=""
+                        className="w-full h-auto rounded"
+                        style={{ maxWidth: "100px" }}
+                      />
+                      <label className="text-white flex align-middle justify-center ">
+                        AnimeQuote
+                      </label>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            ) : null /* If useAnimeQuotePlugin() returns false, render nothing */
+          }
+        </div>
+      </div>
     </div>
   );
 }
