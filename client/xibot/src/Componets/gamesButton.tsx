@@ -86,7 +86,7 @@ export default function GamesButton() {
                   htmlFor=""
                   className="text-white flex align-middle justify-center"
                 >
-                  HexGL
+                  any
                 </label>
               </div>
 
@@ -96,7 +96,7 @@ export default function GamesButton() {
               >
                 {winBoxStates["winbox13"] && (
                   <WinBox
-                    title="Game"
+                    title="any"
                     width={550}
                     height={590}
                     x={100}
@@ -111,7 +111,7 @@ export default function GamesButton() {
                     htmlFor=""
                     className="text-white flex align-middle justify-center"
                   >
-                    Game
+                    Play
                   </label>
                 </div>
               </button>
@@ -130,7 +130,7 @@ export default function GamesButton() {
                   htmlFor=""
                   className="text-white flex align-middle justify-center"
                 >
-                  Sava
+                  any
                 </label>
               </div>
 
@@ -140,7 +140,7 @@ export default function GamesButton() {
               >
                 {winBoxStates["winbox14"] && (
                   <WinBox
-                    title="Game"
+                    title="any"
                     width={550}
                     height={590}
                     x={100}
@@ -155,7 +155,7 @@ export default function GamesButton() {
                     htmlFor=""
                     className="text-white flex align-middle justify-center"
                   >
-                    Game
+                    Play
                   </label>
                 </div>
               </button>
@@ -174,7 +174,7 @@ export default function GamesButton() {
                   htmlFor=""
                   className="text-white flex align-middle justify-center"
                 >
-                  ibo
+                  any
                 </label>
               </div>
 
@@ -184,7 +184,7 @@ export default function GamesButton() {
               >
                 {winBoxStates["winbox15"] && (
                   <WinBox
-                    title="Game"
+                    title="any"
                     width={550}
                     height={590}
                     x={100}
@@ -199,7 +199,7 @@ export default function GamesButton() {
                     htmlFor=""
                     className="text-white flex align-middle justify-center"
                   >
-                    Game
+                    Play
                   </label>
                 </div>
               </button>
