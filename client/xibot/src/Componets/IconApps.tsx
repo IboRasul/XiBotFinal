@@ -8,7 +8,7 @@ import AI from "../../Pages/AI";
 // import { Link, Head, router } from "@inertiajs/react";
 import { useState } from "react";
 import AudioPlayer from "./Music.tsx";
-
+import HexGLGame from "./hexGL.tsx";
 // {
 //   user,
 //   header,
@@ -200,7 +200,7 @@ function IconsApps() {
               >
                 {/* <BackGroundVid />
                 <SignUpForm /> */}
-                {/* <HexGLGame /> */}
+                <HexGLGame />
               </WinBox>
             )}
             <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">

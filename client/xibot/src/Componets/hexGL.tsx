@@ -1,5 +1,9 @@
 function HexGLGame() {
-  return <div dangerouslySetInnerHTML={{ __html: htmlFile }} />;
+  return (
+    <>
+      <iframe src="../../Games/HexGL/index.html"></iframe>
+    </>
+  );
 }
 
 export default HexGLGame;
