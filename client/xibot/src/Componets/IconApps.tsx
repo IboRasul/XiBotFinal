@@ -89,7 +89,7 @@ function IconsApps() {
                 background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
                 onClose={() => closeWinBox("winbox1")}
               >
-                <AudioPlayer audioSrc={"public/musics/a.mp3"} />
+                <AudioPlayer />
               </WinBox>
             )}
             <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3 ">
@@ -201,7 +201,7 @@ function IconsApps() {
               >
                 {/* <BackGroundVid />
                 <SignUpForm /> */}
-                <HexGLGame />
+                {/* <HexGLGame /> */}
               </WinBox>
             )}
             <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">
