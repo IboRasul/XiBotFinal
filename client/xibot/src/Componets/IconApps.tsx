@@ -57,7 +57,7 @@ function IconsApps() {
   console.log(useAnimeQuotePlugin());
 
   return (
-    <div className="grid grid-cols-5 grid-rows-2 gap-2 overflow-x-hidden">
+    <div className="grid grid-cols-11 grid-rows-1">
       {/* first Coloum */}
 
       <div className="col-span-1 row-span-1">
