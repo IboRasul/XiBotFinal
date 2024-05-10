@@ -76,13 +76,11 @@ export default function Developers() {
           <li>
             <div className="flex flex-col items-center justify-center">
               <div className="backdrop-blur m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">
-                <div className="w-32 h-32">
-                  <img
-                    src="https://i.pinimg.com/564x/c2/99/f8/c299f80407ef02701b4525c490eb4a51.jpg"
-                    alt=""
-                    className="h-32 w-32"
-                  />
-                </div>
+                <img
+                  src="https://i.pinimg.com/originals/91/66/6e/91666e9a153d15052a86a55903569c89.gif"
+                  alt=""
+                  className="h-32 w-32"
+                />
                 <label
                   htmlFor=""
                   className="text-white flex align-middle justify-center"
