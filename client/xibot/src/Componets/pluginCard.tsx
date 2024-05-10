@@ -1,5 +1,7 @@
 import axios from "axios"; // Import axios
 
+import { useAnimeQuotePlugin,useAnimeQuotePluginUpdate } from "../contexts/PluginContext";
+
 export default function PluginCard({ apiLink, image, title, description }) {
   const apiCall = () => {
     axios
@@ -11,6 +13,9 @@ export default function PluginCard({ apiLink, image, title, description }) {
         console.error(`Error fetching ${title}:`, error);
       });
   };
+
+  const toggleAnimeQuotePlugin = useAnimeQuotePluginUpdate();
+  console.log( useAnimeQuotePlugin);
 
   return (
     <div className="col border-red-700 border shadow-2xl m-4 rounded-lg">
@@ -24,8 +29,10 @@ export default function PluginCard({ apiLink, image, title, description }) {
         </div>
         <p className="text-xl font-bold">{title}</p>
         <p>{description}</p>
+        
         <button
-          onClick={apiCall}
+          // onClick={apiCall}
+          onClick={toggleAnimeQuotePlugin}
           className="bg-red-300 hover:bg-red-500 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
         >
           <svg

@@ -10,6 +10,11 @@ import { PageProps } from "@/types";
 import { useState, PropsWithChildren, ReactNode, useEffect } from "react";
 import AudioPlayer from "./Music.tsx";
 import FlyingPlaneHTML from "./ahmedPlane.tsx";
+
+import { useAnimeQuotePlugin } from "../contexts/PluginContext";
+import zIndex from "@mui/material/styles/zIndex";
+import AnimeQuoteData from "./animeQuoteData";
+
 function IconsApps({
   user,
   header,
@@ -23,6 +28,17 @@ function IconsApps({
     winbox4: false,
     winbox5: false,
     winbox9: false,
+
+    winbox10: false,
+    winbox11: false,
+    winbox12: false,
+    winbox13: false,
+    winbox14: false,
+    winbox15: false,
+    winbox16: false,
+    winbox17: false,
+    winbox18: false,
+    winbox19: false,
   });
 
   const openWinBox = (title: string) => {
@@ -32,11 +48,57 @@ function IconsApps({
   const closeWinBox = (title: string) => {
     setWinBoxStates((prevStates) => ({ ...prevStates, [title]: false }));
   };
+  console.log("help ")
+  console.log(useAnimeQuotePlugin());
 
+
+  
   return (
     <div className="grid-cols-11 grid ">
       <span className="">
         <ul className="">
+                {/* Conditionally render based on useAnimeQuotePlugin() */}
+      {useAnimeQuotePlugin() ? (
+        // This div will only be rendered if animeQuotePluginEnabled is true
+        <div id="first">
+          <div className="flex flex-col items-center justify-center">
+            <button
+              onClick={() => openWinBox("winbox10")}
+              className="bg-transparent"
+            >
+              {winBoxStates["winbox10"] && (
+                <WinBox
+                  title="Anime Quote"
+                  width={350}
+                  height={497}
+                  x={100}
+                  y={50}
+                  noResize={true}
+                  // border={1}
+                  background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
+                  onclose={() => closeWinBox("winbox10")
+                  }
+                >
+                  {/* todo api request data show here */}
+                  <AnimeQuoteData />
+                </WinBox>
+              )}
+              <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3 ">
+                <img
+                  src="https://media.tenor.com/cyORI7kwShQAAAAi/shigure-ui-dance.gif"
+                  alt=""
+                  className="w-full h-auto rounded"
+                  style={{ maxWidth: "100px" }}
+                />
+                <label className="text-white flex align-middle justify-center ">
+                  AnimeQuote
+                </label>
+              </div>
+            </button>
+          </div>
+        </div>
+      ) : null /* If useAnimeQuotePlugin() returns false, render nothing */}
+        <div id="first">
           <div className="flex flex-col items-center justify-center">
             <button
               onClick={() => openWinBox("winbox0")}
@@ -63,13 +125,13 @@ function IconsApps({
                   className="w-full h-auto rounded"
                   style={{ maxWidth: "100px" }}
                 />
-
                 <label className="text-white flex align-middle justify-center ">
                   AI
                 </label>
               </div>
             </button>
           </div>
+        </div>
 
           <li className="flex flex-col items-center justify-center">
             <button

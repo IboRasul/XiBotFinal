@@ -70,61 +70,17 @@ function Component({ buttonName }) {
 
             <div className="grid grid-cols-3">
               
-              <PluginCard apiLink={"https://animechan.xyz/api/random"} image={"https://media.tenor.com/cyORI7kwShQAAAAi/shigure-ui-dance.gif"} title={"Anime Quote"} description={"Random anime qoute. Awesome!"}/>
-
-              <div className="col border-red-700 border shadow-2xl m-4 rounded-lg ">
-                <div className="m-1">
-                  <div className="flex flex-row justify-center">
-                    <img
-                      src="https://i.pinimg.com/originals/23/17/14/231714e953b3482067337f40c7f8af7f.gif"
-                      alt=""
-                      className="inline h-24 rounded"
-                    />
-                  </div>
-                  <p className="text-xl font-bold">Art Gen</p>
-                  <p>Art Gen generate arts in realtime</p>
-                </div>
-              </div>
-              <div className="col border-red-700 border shadow-2xl m-4 rounded-lg ">
-                <div className="m-1">
-                  <div className="flex flex-row justify-center">
-                    <img
-                      src="https://i.pinimg.com/originals/23/17/14/231714e953b3482067337f40c7f8af7f.gif"
-                      alt=""
-                      className="inline h-24 rounded"
-                    />
-                  </div>
-                  <p className="text-xl font-bold">Art Gen</p>
-                  <p>Art Gen generate arts in realtime</p>
-                </div>
-              </div>
-              <div className="col border-red-700 border shadow-2xl m-4 rounded-lg ">
-                <div className="m-1">
-                  <div className="flex flex-row justify-center">
-                    <img
-                      src="https://i.pinimg.com/originals/23/17/14/231714e953b3482067337f40c7f8af7f.gif"
-                      alt=""
-                      className="inline h-24 rounded"
-                    />
-                  </div>
-                  <p className="text-xl font-bold">Art Gen</p>
-                  <p>Art Gen generate arts in realtime</p>
-                </div>
-              </div>
+            <PluginCard apiLink={"https://animechan.xyz/api/random"} image={"https://media.tenor.com/cyORI7kwShQAAAAi/shigure-ui-dance.gif"} title={"Anime Quote"} description={"Random anime qoute. Awesome!"}/>
+            <PluginCard apiLink={"https://animechan.xyz/api/random"} image={"https://i.pinimg.com/originals/89/bb/06/89bb06251fb7401e094b1f6d71f3d3f4.gif"} title={"Art Gen"} description={"Art Generation. Borrowing Art!"}/>
+            <PluginCard apiLink={"https://animechan.xyz/api/random"} image={"https://64.media.tumblr.com/863257dd3c283123dd895270f4ddbcf3/d04fe1d6fc0d57b9-81/s400x600/726a7ada710aa4f4c669efc6e906dbdfa39e0d3b.gifv"} title={"Art Gen"} description={"Art Generation. Borrowing Art!"}/>
+            <PluginCard apiLink={"https://animechan.xyz/api/random"} image={"https://64.media.tumblr.com/cbcd5ba70270c67dbcc2af1ea9617a82/4e9537cad97cbf25-61/s400x600/21cd60dcf9a43d643ecb77d62d09d1cbb9badb1f.gifv"} title={"Art Gen"} description={"Art Generation. Borrowing Art!"}/>
             </div>
           </div>
         </Modal.Body>
-        <Modal.Footer className="bg-red-50">
-          <Button className="bg-cyan-600" onClick={() => setOpenModal(false)}>
-            I accept
-          </Button>
-          <Button
-            color="red"
-            className="bg-red-800 "
-            onClick={() => setOpenModal(false)}
-          >
-            <span className="text-white">Decline</span>
-          </Button>
+        <Modal.Footer className="">
+
+          Hi im a footer down here not near your foot
+
         </Modal.Footer>
       </Modal>
     </>
