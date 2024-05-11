@@ -5,10 +5,7 @@ import { useState } from "react";
 
 import PluginCard from "./pluginCard";
 
-import {
-  useAnimeQuotePlugin,
-  useAnimeQuotePluginUpdate,
-} from "../contexts/AnimeContext";
+import { useAnimeQuotePluginUpdate } from "../contexts/AnimeContext";
 import { useMoviesPluginUpdate } from "../contexts/MoviePlugins";
 // import ToggleButton from '@mui/material/ToggleButton';
 
