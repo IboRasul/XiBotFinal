@@ -2,8 +2,7 @@ import { useState } from "react";
 
 import WinBox from "react-winbox";
 
-import HexGLGame from "./hexGL";
-import ChessGame from "./chessGame";
+import { HexGLGame, SnakeGame } from "./games";
 
 export default function GamesButton() {
   const [winBoxStates, setWinBoxStates] = useState({
@@ -106,7 +105,7 @@ export default function GamesButton() {
                     background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
                     onClose={() => closeWinBox("winbox13")}
                   >
-                    <ChessGame />
+                    <SnakeGame />
                   </WinBox>
                 )}
                 <div className="backdrop-blur   drop-shadow-lg shadow-2xl text-gray-500  ">
@@ -194,7 +193,7 @@ export default function GamesButton() {
                     y={50}
                     noResize={false}
                     background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
-                    onClose={() => closeWinBox("winbox14")}
+                    onClose={() => closeWinBox("winbox15")}
                   ></WinBox>
                 )}
                 <div className="backdrop-blur   drop-shadow-lg shadow-2xl text-gray-500  ">
