@@ -11,6 +11,7 @@ import AudioPlayer from "./Music.tsx";
 import { useAnimeQuotePlugin } from "../contexts/PluginContext";
 import AnimeQuoteData from "./animeQuoteData";
 import GamesButton from "./gamesButton.tsx";
+import MovieProps from "./movieProps.tsx";
 
 // function IconsApps({
 //   user,
@@ -292,6 +293,43 @@ function IconsApps() {
               </div>
             ) : null /* If useAnimeQuotePlugin() returns false, render nothing */
           }
+        </div>
+
+        <div>
+          <button
+            onClick={() => openWinBox("winbox12")}
+            className="bg-transparent"
+          >
+            {winBoxStates["winbox12"] && (
+              <WinBox
+                title="Movie Database"
+                width={350}
+                height={550}
+                x={100}
+                y={50}
+                noResize={false}
+                background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
+                onClose={() => closeWinBox("winbox12")}
+              >
+                <MovieProps />
+                {/* <GamesButton /> */}
+              </WinBox>
+            )}
+            <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">
+              <img
+                src="https://i.pinimg.com/originals/d7/c5/4c/d7c54cb21945edfa4d063cba370841e4.gif"
+                alt=""
+                className="w-full h-auto rounded"
+                style={{ maxWidth: "100px" }}
+              />
+              <label
+                htmlFor=""
+                className="text-white flex ali gn-middle justify-center"
+              >
+                Arcade
+              </label>
+            </div>
+          </button>
         </div>
       </div>
     </div>

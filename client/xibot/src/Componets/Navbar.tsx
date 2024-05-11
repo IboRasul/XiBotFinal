@@ -84,28 +84,13 @@ function Navbar({
             />
           </svg>
         </button>
-        {/* <div className="sm:fit sm:top-0 sm:right-0 p-6 text-end">
-                <Link
-                                href={route('login')}
-                                className="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                            >
-                                Log in
-                            </Link>
 
-                            <Link
-                                href={route('register')}
-                                className="ms-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                            >
-                                Register
-                            </Link>
-                       
-                </div> */}
         <div className="hidden w-full md:block md:w-auto " id="navbar-default">
           <ul
             className="font-medium flex flex-col md:p-0 mt-4 border md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-black/20 rounded"
             style={{ paddingLeft: "6px", paddingRight: "6px" }}
           >
-            <li>
+            {/* <li>
               <div className="z-10">
                 <button
                   onClick={() => openWinBox("login0")}
@@ -130,7 +115,7 @@ function Navbar({
                   </WinBox>
                 )}
               </div>
-            </li>
+            </li> */}
             <li>
               <div className="z-10">
                 <button
