@@ -2,16 +2,11 @@
 import "winbox/dist/css/winbox.min.css";
 import "winbox/dist/css/themes/modern.min.css";
 import WinBox from "react-winbox";
-
 import BackGroundVid from "./dump/BackGroundVid";
-
 import Developers from "./Developers";
 import GifSelector from "./GifSelector";
-
 import { useState, PropsWithChildren, ReactNode } from "react";
-
 import LoginForm from "./LoginForm";
-import "../../public/css/plane.css";
 import Modal from "../../src/Componets/Modal";
 interface NavbarProps {
   handleGifSelect: (gif: string) => void; // Define the type of handleGifSelect prop
