@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-// GifSelector.tsx
+
 import { FC, ChangeEvent, useState, useEffect } from "react";
 import axios from "axios";
 
