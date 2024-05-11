@@ -11,7 +11,7 @@ import { useState, PropsWithChildren, ReactNode, useEffect } from "react";
 import AudioPlayer from "./Music.tsx";
 import FlyingPlaneHTML from "./ahmedPlane.tsx";
 
-import { useAnimeQuotePlugin } from "../contexts/PluginContext";
+import { useAnimeQuotePlugin } from "../contexts/AnimeContext.tsx";
 import zIndex from "@mui/material/styles/zIndex";
 import AnimeQuoteData from "./animeQuoteData";
 

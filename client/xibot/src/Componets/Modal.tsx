@@ -4,10 +4,18 @@ import { Button, Modal } from "flowbite-react";
 import { useState } from "react";
 
 import PluginCard from "./pluginCard";
+
+import {
+  useAnimeQuotePlugin,
+  useAnimeQuotePluginUpdate,
+} from "../contexts/AnimeContext";
+import { useMoviesPluginUpdate } from "../contexts/MoviePlugins";
 // import ToggleButton from '@mui/material/ToggleButton';
 
 function Component({ buttonName }) {
   const [openModal, setOpenModal] = useState(true);
+  const toggleAnimeQuotePlugin = useAnimeQuotePluginUpdate();
+  const toggleMoviePlugin = useMoviesPluginUpdate();
 
   return (
     <>
@@ -75,30 +83,15 @@ function Component({ buttonName }) {
                 }
                 title={"Anime Quote"}
                 description={"Random anime qoute. Awesome!"}
+                onClickAction={toggleAnimeQuotePlugin} // Pass toggleAnimeQuotePlugin function as onClickAction
               />
+              {/* Example 2: Passing toggleAnimeQuotePlugin as onClickAction */}
               <PluginCard
-                apiLink={"https://animechan.xyz/api/random"}
-                image={
-                  "https://i.pinimg.com/originals/89/bb/06/89bb06251fb7401e094b1f6d71f3d3f4.gif"
-                }
-                title={"Art Gen"}
-                description={"Art Generation. Borrowing Art!"}
-              />
-              <PluginCard
-                apiLink={"https://animechan.xyz/api/random"}
-                image={
-                  "https://64.media.tumblr.com/863257dd3c283123dd895270f4ddbcf3/d04fe1d6fc0d57b9-81/s400x600/726a7ada710aa4f4c669efc6e906dbdfa39e0d3b.gifv"
-                }
-                title={"Art Gen"}
-                description={"Art Generation. Borrowing Art!"}
-              />
-              <PluginCard
-                apiLink={"https://animechan.xyz/api/random"}
-                image={
-                  "https://64.media.tumblr.com/cbcd5ba70270c67dbcc2af1ea9617a82/4e9537cad97cbf25-61/s400x600/21cd60dcf9a43d643ecb77d62d09d1cbb9badb1f.gifv"
-                }
-                title={"Art Gen"}
-                description={"Art Generation. Borrowing Art!"}
+                apiLink="your-api-link"
+                image="your-image-src"
+                title="Plugin Title"
+                description="Plugin Description"
+                onClickAction={toggleMoviePlugin} // Pass toggleAnimeQuotePlugin function as onClickAction
               />
             </div>
           </div>
