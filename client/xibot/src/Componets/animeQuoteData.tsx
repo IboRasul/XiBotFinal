@@ -1,15 +1,21 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import BackGroundVid from "./BackGroundVid";
 
+interface Quote {
+  character: string;
+  quote: string;
+  anime: string;
+}
+
 const AnimeQuoteData = () => {
-  const [quote, setQuote] = useState(null);
+  const [quote, setQuote] = useState<Quote | null>(null); // Specify the type as Quote or null
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchQuote = async () => {
       try {
         const response = await fetch("https://animechan.xyz/api/random");
-        const data = await response.json();
+        const data: Quote = await response.json(); // Specify the type as Quote
         setQuote(data);
         setLoading(false);
       } catch (error) {
