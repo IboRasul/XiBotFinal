@@ -123,7 +123,7 @@ function Navbar({
                     y={50}
                     noResize={false}
                     background="linear-gradient(90deg, rgba(173,11,4,1) 20%, rgba(160,201,151,1) 90%)"
-                    onclose={() => closeWinBox("login0")}
+                    onClose={() => closeWinBox("login0")}
                   >
                     <BackGroundVid />
                     <SignUpForm />
@@ -149,7 +149,7 @@ function Navbar({
                     y={50}
                     noResize={false}
                     background="linear-gradient(90deg, rgba(173,11,4,1) 20%, rgba(160,201,151,1) 90%)"
-                    onclose={() => closeWinBox("login1")}
+                    onClose={() => closeWinBox("login1")}
                   >
                     <BackGroundVid />
                     <LoginForm />
@@ -172,6 +172,9 @@ function Navbar({
                     height={497}
                     x={100}
                     y={50}
+                    noMax={true}
+                    noMin={true}
+                    noFull={true}
                     noResize={true}
                     background="linear-gradient(90deg, rgba(173,11,4,1) 20%, rgba(160,201,151,1) 90%)"
                     onClose={() => closeWinBox("login3")}
