@@ -7,30 +7,25 @@ import "../public/Font/FreePixel.ttf";
 import CustomMenu from "./Componets/CustomMenu";
 
 import { AnimeQuotePluginProvider } from "./contexts/PluginContext";
-import BackgroundColorSelector, {
-  BackgroundColorProvider,
-} from "./Componets/BackgroundColor";
-import MyComponent from "./Componets/MyComponent";
 
 function App() {
   return (
     <div className="p-0 m-0 place-items-start items-start align-baseline">
-      <BackgroundColorProvider>
-        <BackgroundColorSelector />
+      {/* <BackgroundColorProvider>
+        <BackgroundColorSelector /> */}
 
-        {/* <CustomMenu items={[]}/> */}
-        <AnimeQuotePluginProvider>
-          {/* <BackGroundVid sample="https://i.pinimg.com/originals/cb/d7/0c/cbd70c9cacbcf6d767b5cdf1c5a8a62a.gif" /> */}
-          <Navbar
-            handleGifSelect={function (gif: string): void {
-              throw new Error("Function not implemented.");
-            }}
-          />
-          <IconsApps />
-          <CustomMenu items={["Abort C:/"]} />
-          <MyComponent />
-        </AnimeQuotePluginProvider>
-      </BackgroundColorProvider>
+      <CustomMenu items={[]} />
+      <AnimeQuotePluginProvider>
+        <BackGroundVid sample="https://i.pinimg.com/originals/cb/d7/0c/cbd70c9cacbcf6d767b5cdf1c5a8a62a.gif" />
+        <Navbar
+          handleGifSelect={function (gif: string): void {
+            throw new Error("Function not implemented.");
+          }}
+        />
+        <IconsApps />
+        <CustomMenu items={["Abort C:/"]} />
+      </AnimeQuotePluginProvider>
+      {/* </BackgroundColorProvider> */}
     </div>
   );
 }

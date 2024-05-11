@@ -10,7 +10,6 @@ import GifSelector from "./GifSelector";
 
 import { useState, PropsWithChildren, ReactNode } from "react";
 
-import SignUpForm from "./SignUpForm";
 import LoginForm from "./LoginForm";
 import "../../public/css/plane.css";
 import Modal from "../../src/Componets/Modal";
