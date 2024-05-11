@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import WinBox from "react-winbox";
-import SignUpForm from "./SignUpForm";
+
 import BackGroundVid from "./BackGroundVid";
 import BackgroundSelector from "./BackgroundSelector";
 
@@ -33,7 +33,7 @@ const CustomMenu: React.FC<CustomMenuProps> = ({ items }) => {
     };
     const handleDocumentClick = () => {
       console.log("hellow");
-      
+
       setMenuVisible(false);
     };
     document.addEventListener("contextmenu", handleContextMenu);
@@ -69,39 +69,39 @@ const CustomMenu: React.FC<CustomMenuProps> = ({ items }) => {
           >
             Open WinBox
           </button>
-          </div>
+        </div>
 
-          // {winBoxStates["login0"] && (
-          //   <WinBox
-          //     title="login0"
-          //     width={350}
-          //     height={497}
-          //     x={100}
-          //     y={50}
-          //     noResize={true}
-          //     background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
-          //     onclose={() => closeWinBox("login0")}
-          //   >
-          //     <BackGroundVid />
-          //     <SignUpForm />
-          //   </WinBox>
-          // )}
+        // {winBoxStates["login0"] && (
+        //   <WinBox
+        //     title="login0"
+        //     width={350}
+        //     height={497}
+        //     x={100}
+        //     y={50}
+        //     noResize={true}
+        //     background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
+        //     onclose={() => closeWinBox("login0")}
+        //   >
+        //     <BackGroundVid />
+        //     <SignUpForm />
+        //   </WinBox>
+        // )}
       )}
-        {winBoxStates["login0"] && (
-            <WinBox
-              title="login0"
-              width={350}
-              height={497}
-              x={100}
-              y={50}
-              noResize={true}
-              background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
-              onclose={() => closeWinBox("login0")}
-            >
-              <BackGroundVid />
-              <BackgroundSelector />
-            </WinBox>
-          )}
+      {winBoxStates["login0"] && (
+        <WinBox
+          title="login0"
+          width={350}
+          height={497}
+          x={100}
+          y={50}
+          noResize={true}
+          background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
+          onClose={() => closeWinBox("login0")}
+        >
+          <BackGroundVid sample={undefined} />
+          <BackgroundSelector />
+        </WinBox>
+      )}
     </div>
   );
 };

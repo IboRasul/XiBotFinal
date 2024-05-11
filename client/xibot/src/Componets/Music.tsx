@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import AudioPlayer from "react-modern-audio-player";
 
 const playList = [
@@ -43,7 +43,7 @@ const playList = [
 function Music() {
   const [currentSongId, setCurrentSongId] = useState(1); // Initial song id
 
-  const handleSongChange = (newSongId) => {
+  const handleSongChange = (newSongId: SetStateAction<number>) => {
     setCurrentSongId(newSongId);
   };
 
@@ -55,7 +55,9 @@ function Music() {
           volume: 0.2,
           curPlayId: currentSongId,
         }}
-        onPlay={(item) => handleSongChange(item.id)}
+        onPlay={(item: { id: SetStateAction<number> }) =>
+          handleSongChange(item.id)
+        }
         placement={{
           interface: {
             templateArea: {

@@ -1,30 +1,29 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import "winbox/dist/css/winbox.min.css";
 import "winbox/dist/css/themes/modern.min.css";
 import WinBox from "react-winbox";
-// import React, { useState, useEffect } from "react";
-// import SignUpForm from "./SignUpForm";
+
 import BackGroundVid from "./dump/BackGroundVid";
-import BackgroundSelector from "./dump/BackgroundSelector";
+
 import Developers from "./Developers";
 import GifSelector from "./GifSelector";
-// import A from "../../../../vendor/tightenco/ziggy/dist/index.m";
-// import { Link, Head } from '@inertiajs/react';
-import { PageProps } from "@/types";
-import { useState, PropsWithChildren, ReactNode, useEffect } from "react";
-import ApplicationLogo from "@/Components/ApplicationLogo";
-import Dropdown from "@/Components/Dropdown";
-import NavLink from "@/Components/NavLink";
-import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
+
+import { useState, PropsWithChildren, ReactNode } from "react";
+
 import SignUpForm from "./SignUpForm";
 import LoginForm from "./LoginForm";
 import "../../public/css/plane.css";
 import Modal from "../../src/Componets/Modal";
-
+interface NavbarProps {
+  handleGifSelect: (gif: string) => void; // Define the type of handleGifSelect prop
+  header?: ReactNode;
+  children?: ReactNode;
+}
 function Navbar({
   handleGifSelect,
   header,
   children,
-}: PropsWithChildren<{ header?: ReactNode }>) {
+}: PropsWithChildren<NavbarProps>) {
   const [winBoxStates, setWinBoxStates] = useState({
     login0: false,
     login1: false,
@@ -48,10 +47,6 @@ function Navbar({
   }
 
   const currentDateString: string = getCurrentDate();
-
-  function openModal(event: MouseEvent<HTMLAnchorElement, MouseEvent>): void {
-    throw new Error("Function not implemented.");
-  }
 
   return (
     <nav className=" p-1 pb-2 backdrop-blur bg-white/10 mx-5 mb-5 rounded-b-xl drop-shadow-lg shadow-2xl text-gray-100">
@@ -179,7 +174,7 @@ function Navbar({
                     y={50}
                     noResize={true}
                     background="linear-gradient(90deg, rgba(173,11,4,1) 20%, rgba(160,201,151,1) 90%)"
-                    onclose={() => closeWinBox("login3")}
+                    onClose={() => closeWinBox("login3")}
                   >
                     <Developers />
                   </WinBox>

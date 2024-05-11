@@ -1,6 +1,12 @@
 import { useState } from "react";
 
-function Panel({ title, children, isActive, onShow }) {
+interface PanelProps {
+  title: string; // Define the type of the 'title' prop
+  children: React.ReactNode; // Define the type of the 'children' prop
+  isActive: boolean; // Define the type of the 'isActive' prop
+  onShow: () => void; // Define the type of the 'onShow' prop
+}
+function Panel({ title, children, isActive, onShow }: PanelProps) {
   return (
     <section className="panel">
       <h3>{title}</h3>
@@ -15,7 +21,7 @@ function Panel({ title, children, isActive, onShow }) {
   );
 }
 
-export default function SignUpForm() {
+export default function LoginForm() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (

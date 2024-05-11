@@ -1,10 +1,9 @@
 import "winbox/dist/css/winbox.min.css";
 import "winbox/dist/css/themes/modern.min.css";
 import WinBox from "react-winbox";
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 // import SignUpForm from "./SignUpForm";
-import BackGroundVid from "./dump/BackGroundVid";
-import BackgroundSelector from "./dump/BackgroundSelector";
+
 ``;
 import Developers from "./Developers";
 import GifSelector from "./GifSelector";
@@ -132,7 +131,7 @@ function Navbar({ handleGifSelect }) {
                     y={50}
                     noResize={true}
                     background="linear-gradient(90deg, rgba(173,11,4,1) 20%, rgba(160,201,151,1) 90%)"
-                    onclose={() => closeWinBox("login3")}
+                    onClose={() => closeWinBox("login3")}
                   >
                     <Developers />
                   </WinBox>

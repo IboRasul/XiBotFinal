@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import { SetStateAction, useState } from "react";
 import BackGroundVid from "./BackGroundVid";
 function BackgroundSelector() {
   // Define state to manage the selected background image
   const [selectedBackground, setSelectedBackground] = useState("src/1.jpg");
 
   // Function to handle background selection
-  const handleBackgroundChange = (event) => {
+  const handleBackgroundChange = (event: {
+    target: { value: SetStateAction<string> };
+  }) => {
     setSelectedBackground(event.target.value);
   };
 
@@ -30,7 +32,7 @@ function BackgroundSelector() {
           <button
             className="backdrop-blur bg-black/40 m-5 rounded-3xl drop-shadow-lg shadow-2xl text-gray-100 w-min p-5 flex-col align-middle justify-center"
             // onClick={() => handleChangeBackground(selectedBackground)}
-            onChange={handleBackgroundChange}
+            // onChange={handleBackgroundChange}
           >
             Change Background
           </button>
