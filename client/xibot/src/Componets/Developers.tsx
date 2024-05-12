@@ -32,9 +32,9 @@ export default function Developers() {
             <div className="flex flex-col items-center justify-center">
               <div className="backdrop-blur m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">
                 <img
-                  src="https://i.pinimg.com/originals/91/66/6e/91666e9a153d15052a86a55903569c89.gif"
+                  src="public/images/Holan.jpg"
                   alt=""
-                  className="h-32 w-32"
+                  className="h-13 w-22"
                 />
                 <label
                   htmlFor=""
@@ -77,9 +77,9 @@ export default function Developers() {
             <div className="flex flex-col items-center justify-center">
               <div className="backdrop-blur m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">
                 <img
-                  src="https://i.pinimg.com/originals/91/66/6e/91666e9a153d15052a86a55903569c89.gif"
+                  src="public/images/Ahmed.jpg"
                   alt=""
-                  className="h-32 w-32"
+                  className="h-13 w-22"
                 />
                 <label
                   htmlFor=""
@@ -123,7 +123,7 @@ export default function Developers() {
             <div className="flex flex-col items-center justify-center">
               <div className="backdrop-blur m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">
                 <img
-                  src="https://i.pinimg.com/564x/19/18/0a/19180a35be4561ed7bde1a61e85046ee.jpg"
+                  src="https://i.pinimg.com/originals/23/17/14/231714e953b3482067337f40c7f8af7f.gif"
                   alt=""
                   className="h-32 w-32"
                 />

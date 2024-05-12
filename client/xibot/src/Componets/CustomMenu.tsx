@@ -79,7 +79,7 @@ const CustomMenu: React.FC<CustomMenuProps> = ({ items }) => {
           </button>
           <br />
           <button
-            onClick={() => openWinBox("login0")}
+            onClick={() => openWinBox("win1")}
             className="w-auto h-min font-mono"
           >
             Change Background
@@ -98,7 +98,11 @@ const CustomMenu: React.FC<CustomMenuProps> = ({ items }) => {
           background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
           onClose={() => closeWinBox("win1")}
         >
-          <BackGroundVid sample={undefined} />
+          <BackGroundVid
+            sample={
+              "https://i.pinimg.com/originals/89/83/47/8983470f7e0bd2cc7227a3f007633a84.gif"
+            }
+          />
           <BackgroundSelector />
         </WinBox>
       )}

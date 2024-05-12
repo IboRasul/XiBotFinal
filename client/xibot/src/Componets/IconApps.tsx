@@ -16,6 +16,7 @@ import { useMoviesPlugin } from "../contexts/MoviePlugins.tsx";
 import CountrySearch from "./CountriesApi.tsx";
 import { useCountryPlugin } from "../contexts/CountriesPlugin.tsx";
 import MovieProps from "./movieProps.tsx";
+import BackGroundVid from "./BackGroundVid.tsx";
 
 // function IconsApps({
 //   user,
@@ -109,13 +110,18 @@ function IconsApps() {
               <WinBox
                 title="Music Player"
                 width={350}
-                height={290}
+                height={390}
                 x={100}
                 y={50}
                 noResize={true}
                 background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
                 onClose={() => closeWinBox("winbox1")}
               >
+                <BackGroundVid
+                  sample={
+                    "https://i.pinimg.com/originals/da/27/01/da270118ba48e395912c411dcc813149.gif"
+                  }
+                />
                 <AudioPlayer />
               </WinBox>
             )}

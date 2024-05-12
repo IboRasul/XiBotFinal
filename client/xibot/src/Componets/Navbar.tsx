@@ -144,7 +144,7 @@ function Navbar() {
                   <WinBox
                     title="Developers"
                     width={350}
-                    height={497}
+                    height={530}
                     x={100}
                     y={50}
                     noMax={true}

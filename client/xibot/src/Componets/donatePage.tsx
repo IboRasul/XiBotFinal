@@ -1,59 +1,81 @@
-export function DonateHolan() {
-  // URL of the Buy Me a Coffee dashboard
-  const dashboardUrl =
-    "https://wallpapercave.com/minimalist-crescent-moon-wallpapers";
+import DonateForm from "./donateForm";
 
-  // Return an iframe to embed the dashboard within the WinBox
+export function DonateHolan() {
   return (
-    <iframe
-      src={dashboardUrl}
-      title="Donate Holan"
-      style={{ width: "100%", height: "100%", border: "none" }}
-    />
+    <>
+      <DonateForm
+        name="Holan"
+        onSubmit={() => {
+          // handle form submission
+        }}
+        onPlus={() => {
+          // handle incrementing item count
+        }}
+        onMinus={() => {
+          // handle decrementing item count
+        }}
+        itemCount={1} // Set the initial item count here
+      />
+    </>
   );
 }
 
 export function DonateAhmed() {
-  // URL of the Buy Me a Coffee dashboard
-  const dashboardUrl =
-    "https://wallpapercave.com/minimalist-crescent-moon-wallpapers";
-
-  // Return an iframe to embed the dashboard within the WinBox
   return (
-    <iframe
-      src={dashboardUrl}
-      title="Donate Ahmed"
-      style={{ width: "100%", height: "100%", border: "none" }}
-    />
+    <>
+      <DonateForm
+        name="Ahmed"
+        onSubmit={() => {
+          // handle form submission
+        }}
+        onPlus={() => {
+          // handle incrementing item count
+        }}
+        onMinus={() => {
+          // handle decrementing item count
+        }}
+        itemCount={1} // Set the initial item count here
+      />
+    </>
   );
 }
 
 export function DonateSava() {
-  // URL of the Buy Me a Coffee dashboard
-  const dashboardUrl =
-    "https://wallpapercave.com/minimalist-crescent-moon-wallpapers";
-
-  // Return an iframe to embed the dashboard within the WinBox
   return (
-    <iframe
-      src={dashboardUrl}
-      title="Donate Ahmed"
-      style={{ width: "100%", height: "100%", border: "none" }}
-    />
+    <>
+      <DonateForm
+        name="Sava"
+        onSubmit={() => {
+          // handle form submission
+        }}
+        onPlus={() => {
+          // handle incrementing item count
+        }}
+        onMinus={() => {
+          // handle decrementing item count
+        }}
+        itemCount={1} // Set the initial item count here
+      />
+    </>
   );
 }
 
 export function DonateIbo() {
-  // URL of the Buy Me a Coffee dashboard
-  const dashboardUrl =
-    "https://wallpapercave.com/minimalist-crescent-moon-wallpapers";
-
-  // Return an iframe to embed the dashboard within the WinBox
   return (
-    <iframe
-      src={dashboardUrl}
-      title="Donate Ahmed"
-      style={{ width: "100%", height: "100%", border: "none" }}
-    />
+    <>
+      <DonateForm
+        name="Ibo"
+        onSubmit={() => {
+          // handle form submission
+        }}
+        onPlus={() => {
+          // handle incrementing item count
+        }}
+        onMinus={() => {
+          // handle decrementing item count
+        }}
+        itemCount={1} // Set the initial item count here
+      />
+    </>
   );
 }
