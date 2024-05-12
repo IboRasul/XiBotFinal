@@ -13,9 +13,6 @@ import { CountryPluginProvider } from "./contexts/CountriesPlugin";
 function App() {
   return (
     <div className="p-0 m-0 place-items-start items-start align-baseline">
-      {/* <BackgroundColorProvider>
-        <BackgroundColorSelector /> */}
-
       <CustomMenu items={[]} />
       <CountryPluginProvider>
         <MoviesPluginProvider>
@@ -23,8 +20,6 @@ function App() {
             <BackGroundVid sample="https://i.pinimg.com/originals/8d/b7/46/8db746ea0f28bdd22eae8b3ee10ac16a.gif" />
             <Navbar />
             <IconsApps />
-
-            <CustomMenu items={["Abort C:/"]} />
           </AnimeQuotePluginProvider>
         </MoviesPluginProvider>
       </CountryPluginProvider>

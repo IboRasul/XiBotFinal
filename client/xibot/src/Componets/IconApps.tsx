@@ -184,7 +184,7 @@ function IconsApps() {
               <WinBox
                 title="Arcade"
                 width={350}
-                height={550}
+                height={350}
                 x={100}
                 y={50}
                 noResize={false}

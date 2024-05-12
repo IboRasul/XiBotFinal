@@ -16,26 +16,29 @@ const CustomMenu: React.FC<CustomMenuProps> = ({ items }) => {
   });
   const [winBoxStates, setWinBoxStates] = useState({
     login0: false,
+    win1: false,
   });
+  const [showBSOD, setShowBSOD] = useState<boolean>(false);
+
   const openWinBox = (title: string) => {
-    console.log("Opening WinBox:", title);
     setWinBoxStates((prevStates) => ({ ...prevStates, [title]: true }));
   };
 
   const closeWinBox = (title: string) => {
     setWinBoxStates((prevStates) => ({ ...prevStates, [title]: false }));
   };
+
   useEffect(() => {
     const handleContextMenu = (event: MouseEvent) => {
       event.preventDefault();
       setMenuVisible(true);
       setPosition({ top: event.clientY, left: event.clientX });
     };
-    const handleDocumentClick = () => {
-      console.log("hellow");
 
+    const handleDocumentClick = () => {
       setMenuVisible(false);
     };
+
     document.addEventListener("contextmenu", handleContextMenu);
     document.addEventListener("click", handleDocumentClick);
 
@@ -44,6 +47,10 @@ const CustomMenu: React.FC<CustomMenuProps> = ({ items }) => {
       document.removeEventListener("click", handleDocumentClick);
     };
   }, []);
+
+  const handleAbortCClick = () => {
+    setShowBSOD(true);
+  };
 
   return (
     <div>
@@ -63,44 +70,72 @@ const CustomMenu: React.FC<CustomMenuProps> = ({ items }) => {
           {items.map((item, index) => (
             <div key={index}>{item}</div>
           ))}
+
+          <button
+            onClick={handleAbortCClick}
+            className="w-auto h-min font-mono"
+          >
+            Abort C:/
+          </button>
+          <br />
           <button
             onClick={() => openWinBox("login0")}
-            className="w-auto h-min font-mono "
+            className="w-auto h-min font-mono"
           >
-            Open WinBox
+            Change Background
           </button>
         </div>
-
-        // {winBoxStates["login0"] && (
-        //   <WinBox
-        //     title="login0"
-        //     width={350}
-        //     height={497}
-        //     x={100}
-        //     y={50}
-        //     noResize={true}
-        //     background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
-        //     onclose={() => closeWinBox("login0")}
-        //   >
-        //     <BackGroundVid />
-        //     <SignUpForm />
-        //   </WinBox>
-        // )}
       )}
-      {winBoxStates["login0"] && (
+
+      {winBoxStates["win1"] && (
         <WinBox
-          title="login0"
+          title="Change Background"
           width={350}
           height={497}
           x={100}
           y={50}
           noResize={true}
           background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
-          onClose={() => closeWinBox("login0")}
+          onClose={() => closeWinBox("win1")}
         >
           <BackGroundVid sample={undefined} />
           <BackgroundSelector />
         </WinBox>
+      )}
+
+      {showBSOD && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "#0000FF",
+            color: "#FFFFFF",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 9999, // Ensure BSOD is on top of everything
+          }}
+        >
+          <div
+            style={{
+              fontSize: "3em",
+              marginBottom: "20px",
+              borderBottom: "2px solid #FFFFFF",
+              paddingBottom: "10px",
+            }}
+          >
+            :( Your PC ran into a problem and needs to restart.
+          </div>
+          <div>
+            If you'd like to know more, you can search online later for this
+            error: STOP: 0x0000000A
+          </div>
+          <div style={{ marginTop: "20px" }}>Press any key to continue...</div>
+        </div>
       )}
     </div>
   );

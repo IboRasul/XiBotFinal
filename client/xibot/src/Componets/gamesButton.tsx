@@ -120,7 +120,7 @@ export default function GamesButton() {
             </div>
           </li>
 
-          <li>
+          {/* <li>
             <div className="flex flex-col items-center justify-center">
               <div className="backdrop-blur m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">
                 <img
@@ -162,51 +162,7 @@ export default function GamesButton() {
                 </div>
               </button>
             </div>
-          </li>
-
-          <li>
-            <div className="flex flex-col items-center justify-center">
-              <div className="backdrop-blur m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">
-                <img
-                  src="https://i.pinimg.com/originals/23/17/14/231714e953b3482067337f40c7f8af7f.gif"
-                  alt=""
-                  className="h-32 w-32"
-                />
-                <label
-                  htmlFor=""
-                  className="text-white flex align-middle justify-center"
-                >
-                  any
-                </label>
-              </div>
-
-              <button
-                onClick={() => openWinBox("winbox15")}
-                className="bg-transparent"
-              >
-                {winBoxStates["winbox15"] && (
-                  <WinBox
-                    title="any"
-                    width={550}
-                    height={590}
-                    x={100}
-                    y={50}
-                    noResize={false}
-                    background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
-                    onClose={() => closeWinBox("winbox15")}
-                  ></WinBox>
-                )}
-                <div className="backdrop-blur   drop-shadow-lg shadow-2xl text-gray-500  ">
-                  <label
-                    htmlFor=""
-                    className="text-white flex align-middle justify-center"
-                  >
-                    Play
-                  </label>
-                </div>
-              </button>
-            </div>
-          </li>
+          </li> */}
         </ul>
       </div>
     </>
