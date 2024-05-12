@@ -59,8 +59,8 @@ function IconsApps() {
   const closeWinBox = (title: string) => {
     setWinBoxStates((prevStates) => ({ ...prevStates, [title]: false }));
   };
-  console.log("help ");
-  console.log(useAnimeQuotePlugin());
+  // console.log("help");
+  // console.log(useAnimeQuotePlugin());
 
   return (
     <div className="grid grid-cols-11 grid-rows-1">
@@ -88,7 +88,7 @@ function IconsApps() {
             )}
             <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3 ">
               <img
-                src="https://i.pinimg.com/originals/73/08/b9/7308b9f96595bfa4ae5942be9cceea35.gif"
+                src="https://i.pinimg.com/originals/1c/a0/67/1ca067bf41dfe147a4f09bb70f764bc8.gif"
                 alt=""
                 className="w-full h-auto rounded"
                 style={{ maxWidth: "100px" }}
@@ -121,7 +121,7 @@ function IconsApps() {
             )}
             <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3 ">
               <img
-                src="https://i.pinimg.com/originals/3d/f3/eb/3df3eb1714d898fdf69c621ea949b3a3.gif"
+                src="https://i.pinimg.com/originals/17/d5/15/17d515774ff6aee4e3c85e17ce352026.gif"
                 alt=""
                 className="w-full h-auto rounded"
                 style={{ maxWidth: "100px" }}
@@ -159,7 +159,7 @@ function IconsApps() {
 
             <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500  p-3 justify-items-center ">
               <img
-                src="https://i.gifer.com/WczZ.gif"
+                src="https://i.pinimg.com/originals/48/79/de/4879de9eb7ef808f740b2119611e4540.gif"
                 alt=""
                 className="w-full h-auto rounded  "
                 style={{ maxWidth: "100px", maxHeight: "100px" }}
@@ -212,10 +212,7 @@ function IconsApps() {
             </div>
           </button>
         </div>
-      </div>
-      {/* Second Coloum goes here  */}
-
-      <div className="col-span-1 row-span-2">
+        {/*  Api Start Here */}
         <div>
           {/* Conditionally render based on useAnimeQuotePlugin() */}
           {
@@ -263,7 +260,10 @@ function IconsApps() {
             ) : null /* If useAnimeQuotePlugin() returns false, render nothing */
           }
         </div>
+      </div>
+      {/* Second Coloum goes here  */}
 
+      <div className="col-span-1 row-span-2">
         <div>
           {
             useMoviesPlugin() ? (

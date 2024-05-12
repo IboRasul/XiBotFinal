@@ -113,7 +113,7 @@ function Component({ buttonName }: ComponentProps) {
                 description="Shows all the Features Movies"
                 onClickAction={toggleMoviePlugin} // Pass toggleAnimeQuotePlugin function as onClickAction
               />
-
+              {/* Example 3: Passing toggleAnimeQuotePlugin as onClickAction */}
               <PluginCard
                 image="https://i.pinimg.com/originals/5a/d6/96/5ad69696e73302c5568e32f19bc3e048.gif"
                 title="Country"
