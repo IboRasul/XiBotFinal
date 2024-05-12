@@ -1,22 +1,14 @@
-import axios from "axios"; // Import axios
+// Import axios
+import { useState } from "react";
 
 export default function PluginCard({
-  apiLink,
   image,
   title,
   description,
-  onClickAction, // New prop to receive the onClick action
+  onClickAction,
 }) {
-  const apiCall = () => {
-    axios
-      .get(`${apiLink}`)
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.error(`Error fetching ${title}:`, error);
-      });
-  };
+  // State to track the installation status
+  const [isInstalled, setIsInstalled] = useState(true);
 
   return (
     <div className="col border-red-700 border shadow-2xl m-4 rounded-lg">
@@ -24,12 +16,15 @@ export default function PluginCard({
         <div className="flex flex-row justify-center">
           <img src={image} alt={title} className="inline h-24 rounded" />
         </div>
-        <p className="text-xl font-bold">{title}</p>
-        <p>{description}</p>
+        <p className="text-xl font-bold text-black">{title}</p>
+        <p className="text-black">{description}</p>
 
         <button
-          onClick={onClickAction} // Use onClickAction as the onClick handler
-          className="bg-red-300 hover:bg-red-500 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+          onClick={() => {
+            onClickAction();
+            setIsInstalled(!isInstalled);
+          }} // Use onClickAction as the onClick handler
+          className="bg-red-300 hover:bg-red-500 text-black font-bold py-2 px-4 rounded inline-flex items-center"
         >
           <svg
             className="fill-current w-4 h-4 mr-2"
@@ -38,7 +33,7 @@ export default function PluginCard({
           >
             <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
           </svg>
-          <span>install</span>
+          <span>{isInstalled ? "Uninstall" : "Install"}</span>
         </button>
       </div>
     </div>

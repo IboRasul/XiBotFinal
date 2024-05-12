@@ -8,6 +8,7 @@ import CustomMenu from "./Componets/CustomMenu";
 
 import { AnimeQuotePluginProvider } from "./contexts/AnimeContext";
 import { MoviesPluginProvider } from "./contexts/MoviePlugins";
+import { CountryPluginProvider } from "./contexts/CountriesPlugin";
 
 function App() {
   return (
@@ -16,18 +17,17 @@ function App() {
         <BackgroundColorSelector /> */}
 
       <CustomMenu items={[]} />
-      <MoviesPluginProvider>
-        <AnimeQuotePluginProvider>
-          <BackGroundVid sample="https://i.pinimg.com/originals/cb/d7/0c/cbd70c9cacbcf6d767b5cdf1c5a8a62a.gif" />
-          <Navbar
-            handleGifSelect={function (gif: string): void {
-              throw new Error("Function not implemented.");
-            }}
-          />
-          <IconsApps />
-          <CustomMenu items={["Abort C:/"]} />
-        </AnimeQuotePluginProvider>
-      </MoviesPluginProvider>
+      <CountryPluginProvider>
+        <MoviesPluginProvider>
+          <AnimeQuotePluginProvider>
+            <BackGroundVid sample="https://i.pinimg.com/originals/8d/b7/46/8db746ea0f28bdd22eae8b3ee10ac16a.gif" />
+            <Navbar />
+            <IconsApps />
+
+            <CustomMenu items={["Abort C:/"]} />
+          </AnimeQuotePluginProvider>
+        </MoviesPluginProvider>
+      </CountryPluginProvider>
       {/* </BackgroundColorProvider> */}
     </div>
   );

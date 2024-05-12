@@ -1,7 +1,7 @@
 import "winbox/dist/css/winbox.min.css";
 import "winbox/dist/css/themes/modern.min.css";
 import WinBox from "react-winbox";
-import SignUpForm from "./SignUpForm";
+
 import AI from "../../Pages/AI";
 // import Music from "./Music";
 // import { Link, Head, router } from "@inertiajs/react";
@@ -11,8 +11,11 @@ import AudioPlayer from "./Music.tsx";
 import { useAnimeQuotePlugin } from "../contexts/AnimeContext.tsx";
 import AnimeQuoteData from "./animeQuoteData";
 import GamesButton from "./gamesButton.tsx";
-import MovieProps from "./movieProps.tsx";
+
 import { useMoviesPlugin } from "../contexts/MoviePlugins.tsx";
+import CountrySearch from "./CountriesApi.tsx";
+import { useCountryPlugin } from "../contexts/CountriesPlugin.tsx";
+import MovieProps from "./movieProps.tsx";
 
 // function IconsApps({
 //   user,
@@ -171,42 +174,7 @@ function IconsApps() {
             </div>
           </button>
         </div>
-        <div>
-          <button
-            onClick={() => openWinBox("winbox2")}
-            className="bg-transparent"
-          >
-            {winBoxStates["winbox2"] && (
-              <WinBox
-                title="Add Music"
-                width={350}
-                height={290}
-                x={100}
-                y={50}
-                noResize={true}
-                background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
-                onClose={() => closeWinBox("winbox2")}
-              >
-                {/* <BackGroundVid /> */}
-                <SignUpForm />
-              </WinBox>
-            )}
-            <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500  p-3">
-              <img
-                src="https://i.pinimg.com/originals/79/8d/e4/798de415648b7a715c90965e7e73dbb1.gif"
-                alt=""
-                className="w-full h-auto rounded"
-                style={{ maxWidth: "100px" }}
-              />
-              <label
-                htmlFor=""
-                className="text-white flex ali gn-middle justify-center"
-              >
-                Music Edit
-              </label>
-            </div>
-          </button>
-        </div>
+
         <div>
           <button
             onClick={() => openWinBox("winbox3")}
@@ -230,7 +198,7 @@ function IconsApps() {
             )}
             <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">
               <img
-                src="https://i.pinimg.com/originals/d7/c5/4c/d7c54cb21945edfa4d063cba370841e4.gif"
+                src="https://i.pinimg.com/originals/e0/49/93/e0499393753f602734e093611053b934.gif"
                 alt=""
                 className="w-full h-auto rounded"
                 style={{ maxWidth: "100px" }}
@@ -286,7 +254,7 @@ function IconsApps() {
                         htmlFor=""
                         className="text-white flex ali gn-middle justify-center"
                       >
-                        Arcade
+                        Anime Qouts
                       </label>
                     </div>
                   </button>
@@ -300,7 +268,7 @@ function IconsApps() {
           {
             useMoviesPlugin() ? (
               // This div will only be rendered if animeQuotePluginEnabled is true
-              <div id="first">
+              <div id="Second">
                 <div>
                   <button
                     onClick={() => openWinBox("winbox12")}
@@ -322,7 +290,7 @@ function IconsApps() {
                     )}
                     <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">
                       <img
-                        src="https://i.pinimg.com/originals/d7/c5/4c/d7c54cb21945edfa4d063cba370841e4.gif"
+                        src="https://i.pinimg.com/originals/43/3d/83/433d83f7e481f35245f8c6bb7c7591d8.gif"
                         alt=""
                         className="w-full h-auto rounded"
                         style={{ maxWidth: "100px" }}
@@ -331,7 +299,7 @@ function IconsApps() {
                         htmlFor=""
                         className="text-white flex ali gn-middle justify-center"
                       >
-                        Arcade
+                        Movies
                       </label>
                     </div>
                   </button>
@@ -340,6 +308,52 @@ function IconsApps() {
             ) : null /* If useAnimeQuotePlugin() returns false, render nothing */
           }
         </div>
+
+        <div>
+          {
+            useCountryPlugin() ? (
+              // This div will only be rendered if animeQuotePluginEnabled is true
+              <div id="Second">
+                <div>
+                  <button
+                    onClick={() => openWinBox("winbox13")}
+                    className="bg-transparent"
+                  >
+                    {winBoxStates["winbox13"] && (
+                      <WinBox
+                        title="Countries"
+                        width={350}
+                        height={550}
+                        x={100}
+                        y={50}
+                        noResize={false}
+                        background="linear-gradient(90deg, rgba(135,91,128,1) 0%, rgba(59,106,218,1) 100%)"
+                        onClose={() => closeWinBox("winbox13")}
+                      >
+                        <CountrySearch />
+                      </WinBox>
+                    )}
+                    <div className="backdrop-blur  m-4 rounded-3xl drop-shadow-lg shadow-2xl text-gray-500 p-3">
+                      <img
+                        src="https://i.pinimg.com/originals/5a/d6/96/5ad69696e73302c5568e32f19bc3e048.gif"
+                        alt=""
+                        className="w-full h-auto rounded"
+                        style={{ maxWidth: "100px" }}
+                      />
+                      <label
+                        htmlFor=""
+                        className="text-white flex ali gn-middle justify-center"
+                      >
+                        Countries
+                      </label>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            ) : null /* If useAnimeQuotePlugin() returns false, render nothing */
+          }
+        </div>
+        <div></div>
       </div>
     </div>
   );

@@ -4,20 +4,16 @@ import "winbox/dist/css/themes/modern.min.css";
 import WinBox from "react-winbox";
 import BackGroundVid from "./dump/BackGroundVid";
 import Developers from "./Developers";
-import GifSelector from "./GifSelector";
-import { useState, PropsWithChildren, ReactNode } from "react";
+
+import { useState } from "react";
 import LoginForm from "./LoginForm";
 import Modal from "../../src/Componets/Modal";
-interface NavbarProps {
-  handleGifSelect: (gif: string) => void; // Define the type of handleGifSelect prop
-  header?: ReactNode;
-  children?: ReactNode;
-}
-function Navbar({
-  handleGifSelect,
-  header,
-  children,
-}: PropsWithChildren<NavbarProps>) {
+// interface NavbarProps {
+//   handleGifSelect: (gif: string) => void; // Define the type of handleGifSelect prop
+//   header?: ReactNode;
+//   children?: ReactNode;
+// }
+function Navbar() {
   const [winBoxStates, setWinBoxStates] = useState({
     login0: false,
     login1: false,
@@ -61,7 +57,7 @@ function Navbar({
           aria-controls="navbar-default"
           aria-expanded="false"
         >
-          <span className="sr-only">Open main menu</span>
+          <span className="sr-only">Open Main Menu</span>
           <svg
             className="w-5 h-5"
             aria-hidden="true"
@@ -116,7 +112,7 @@ function Navbar({
                   onClick={() => openWinBox("login1")}
                   className="bg-transparent"
                 >
-                  Login
+                  Guest Book
                 </button>
 
                 {winBoxStates["login1"] && (
@@ -170,11 +166,15 @@ function Navbar({
                 {/* <span id="span"></span> */}
               </div>
             </li>
-            <li>
+            {/* <li>
               <GifSelector onSelect={handleGifSelect} />
-            </li>
+            </li> */}
 
-            <Modal buttonName={"Plugins"}></Modal>
+            <li>
+              <div>
+                <Modal buttonName={"Plugins"}></Modal>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
